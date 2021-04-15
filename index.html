@@ -92,7 +92,7 @@
                     <div class="col-md-12">
                         <div class="big-title text-center">
                             <h1>Physically-based Rendering Tool Blender Plugin</h1>
-                            <p class="lead">Your awesome theme / template documentation version 1.0</p>
+                            <p class="lead">Documentation Version 1.0</p>
                         </div>
                         <!-- end title -->
                     </div>
@@ -110,6 +110,7 @@
                 <div class="col-md-4">
                     <nav class="docs-sidebar" data-spy="affix" data-offset-top="300" data-offset-bottom="200" role="navigation">
                         <ul class="nav">
+							<li><a href="#line0">Introduction</a></li>
                             <li><a href="#line1">PBRT Sampler</a>
 								<ul class="nav">
                                     <li><a href="#line1_1">Sampler</a></li>
@@ -172,7 +173,6 @@
                             </li>
                             <li><a href="#line8">PBRT Shader Node</a>
 								<ul class="nav">
-                                    <li><a href="#line8_1">Type</a></li>
                                     <li><a href="#line8_2">Model</a></li>
                                     <li><a href="#line8_3">Kr</a></li>
                                     <li><a href="#line8_4">Kt</a></li>
@@ -204,41 +204,27 @@
 
                         <div class="row">
                             <div class="col-md-12 left-align">
-                               <h2 class="dark-text">Introduction<hr></h2>
+                               <h2 id="line0" class="dark-text">Introduction<hr></h2>
                                 <div class="row">
 
                                     <div class="col-md-12 full">
                                         <div class="intro1">
                                             <ul>
-                                                <li><strong>Item Name : </strong>Gather Responsive Event Template</li>
+                                                <li><strong>Item Name : </strong>Physically-based Rendering Tool Blender Plugin</li>
                                                 <li><strong>Item Version : </strong> v 1.0</li>
-                                                <li><strong>Author  : </strong> <a href="http://themeforest.net/user/surjithctly" target="_blank">Surjith S M</a></li>
-                                                <li><strong>Support Forum : </strong> <a href="https://support.surjithctly.in/forums" target="_blank">https://support.surjithctly.in/forums</a></li>
-                                                <li><strong>License : </strong> <a href="#" target="_blank">Un License</a></li>
+                                                <li><strong>Author  : </strong> Filipe Gama, Kamran Akbar</li>
+                                                <li><strong>License : </strong> MIT License</li>
                                             </ul>
                                         </div>
 
                                         <hr>
                                         <div>
-                                            <p>First of all, Thank you so much for purchasing this template and for being my loyal customer.
-                                                <strong>You are awesome!</strong>
-                                                <br> You are entitled to get free lifetime updates to this product + exceptional support from the author directly.
+                                            <p> 
+												This plugin is meant for creating .pbrt scene file for the physically-based rendering engine. 
+												This plugin will provide you required user interface to define different paramteres inside the PBRT scene.
+												In this documentation, you can read and comprehend each component and their properties.
+												The definition of this properties are take from the <a href="https://www.pbrt.org/index.html">PBRT</a> website.
                                             </p>
-
-                                            <p>This documentation is to help you regarding each step of customization. Please go through the documentation carefully to understand how this template is made and how to edit this properly. Basic HTML and CSS knowledge is required to customize this template. You may learn basics <a href="http://www.w3schools.com/" target="_blank">here</a>, <a href="https://developer.mozilla.org/" target="_blank">here</a> and <a href="http://learn.shayhowe.com/html-css/building-your-first-web-page/" target="_blank">here</a>. </p>
-
-                                            <h4>Requirements</h4>
-                                            <p>You will need the following sofwares to customize this template.</p>
-                                            <ol>
-                                                <li>Code Editing Software (eg: Dreamweaver, Sublime Text or Notepad)</li>
-                                                <li>Web Browser for testing (eg: Google Chrome or Mozilla Firefox)</li>
-                                                <li>FTP Tool to upload files to Server (eg: <a href="https://filezilla-project.org/download.php?type=client" target="_blank">FileZilla</a>) </li>
-                                            </ol>
-                                            <div class="intro2 clearfix">
-                                                <p><i class="fa fa-exclamation-triangle"></i> Be careful while editing the template. If not edited properly, the design layout may break completely.
-                                                    <br> No support is provided for faulty customization.
-                                                </p>
-                                            </div>
                                         </div>
                                     </div>
 
@@ -264,14 +250,36 @@
                             <!-- end col -->
                         </div>
                         <!-- end row -->
-
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								The Sampler generates samples for the image, time, lens, and Monte Carlo integration. A number of implementations are provided; 
+								the default "halton"—is an instance of the HaltonSampler that takes 16 samples per pixel.
+								<br><strong>Default:</strong> Halton
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                         <div class="row">
                             <div class="col-md-8">
                                 <h4 id="line1_2">Samples per Pixel</h4>
                             </div>
                             <!-- end col -->
                         </div>
-                        <!-- end row -->    
+                        <!-- end row --> 
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								The number of samples to take, per pixel. Note that the number of samples is taken per pixel on average; 
+								depending on the actual sampling algorithm being used, individual pixel areas may have slightly more or slightly fewer.
+								<br><strong>Default:</strong> 16
+								<br><strong>Range:</strong> [1, infinity]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                     </section>
                     <!-- end section -->
 					
@@ -291,14 +299,36 @@
                             <!-- end col -->
                         </div>
                         <!-- end row -->
-
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								The integrator implements the light transport algorithm that computes radiance arriving at the film plane from surfaces and participating media in the scene. 
+								The default integrator is the PathIntegrator.
+								<br><strong>Default:</strong> Path Integrator
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
+						
                         <div class="row">
                             <div class="col-md-8">
                                 <h4 id="line2_2">Max Depth</h4>
                             </div>
                             <!-- end col -->
                         </div>
-                        <!-- end row -->    
+                        <!-- end row -->  
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								Maximum length of a light-carrying path sampled by the integrator.
+								<br><strong>Default:</strong> 5
+								<br><strong>Range:</strong> [0, infinity]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->						
                     </section>
                     <!-- end section -->
 
@@ -318,13 +348,31 @@
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								This property is for inserting the path which <strong>obj2pbrt.exe</strong> exists.
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->	
                         <div class="row">
                             <div class="col-md-8">
                                 <h4 id="line3_2">Generate PBRT Scene File</h4>
                             </div>
                             <!-- end col -->
                         </div>
-                        <!-- end row -->   
+                        <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								By pressing this button .pbrt scene file will be created in PBRT_SceneFiles folder.
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->							
                     </section>
                     <!-- end section -->
 
@@ -344,6 +392,15 @@
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								This properties refers to the path where 3D meshes exists.
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                         <div class="row">
                             <div class="col-md-8">
                                 <h4 id="line4_2">Object Number</h4>
@@ -352,12 +409,34 @@
                         </div>
                         <!-- end row -->
 						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								This number define the amount of 3D meshes will be taken from the path mentioned above.
+								<br><strong>Default:</strong> 5
+								<br><strong>Range:</strong> [0, infinity]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
+						<div class="row">
                             <div class="col-md-8">
                                 <h4 id="line4_3">X min and max</h4>
 							</div>
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								X min and X max define the minimum and maximum position range for X axis.
+								<br><strong>Default:</strong> X min = -1, X max = 1
+								<br><strong>Range:</strong> [-infinity, infinity]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                         <div class="row">
                             <div class="col-md-8">
                                 <h4 id="line4_4">Y min and max</h4>
@@ -366,12 +445,34 @@
                         </div>
                         <!-- end row -->
 						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								Y min and Y max define the minimum and maximum position range for Y axis.
+								<br><strong>Default:</strong> Y min = -1, Y max = 1
+								<br><strong>Range:</strong> [-infinity, infinity]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
+						<div class="row">
                             <div class="col-md-8">
                                 <h4 id="line4_5">Z min and max</h4>
 							</div>
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								Z min and Z max define the minimum and maximum position range for Z axis.
+								<br><strong>Default:</strong> Z min = -1, Z max = 1
+								<br><strong>Range:</strong> [-infinity, infinity]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                         <div class="row">
                             <div class="col-md-8">
                                 <h4 id="line4_6">Generate Random Scene</h4>
@@ -380,12 +481,30 @@
                         </div>
                         <!-- end row -->
 						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								By Pressing this button, specified number of objects that is defined in <strong>Object Number</strong> property are chosen from the 3D mesh folder path which is defined in <strong>Path to 3D Meshes</strong> property.
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
+						<div class="row">
                             <div class="col-md-8">
                                 <h4 id="line4_7">Generate Random Material</h4>
                             </div>
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								By Pressing this button a <strong>PBRT Shader Node</strong> is created for each object in the scene with random properties.
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                     </section>
                     <!-- end section -->
 
@@ -405,6 +524,16 @@
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								Light sources cast illumination in the scene. There are two types of lights: point light and spot light.
+								<br><strong>Default:</strong> Point Light
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                         <div class="row">
                             <div class="col-md-8">
                                 <h4 id="line5_2">Color</h4>
@@ -413,12 +542,32 @@
                         </div>
                         <!-- end row -->
 						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								This property defines the light color in rgb channel.
+								<br><strong>Default:</strong> (1.0, 1.0, 1.0)
+								<br><strong>Range:</strong> [(0.0, 0.0, 0.0), (1.0, 1.0, 1.0)]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
+						<div class="row">
                             <div class="col-md-8">
                                 <h4 id="line5_3">SPD</h4>
 							</div>
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								This property represents a file path to a file which consists the spectral power distribution. If this property is empty, the plugin will use <strong>Color</strong> Property
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                         <div class="row">
                             <div class="col-md-8">
                                 <h4 id="line5_4">Power</h4>
@@ -427,12 +576,32 @@
                         </div>
                         <!-- end row -->
 						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								Power modulates the amount of light that the light source emits into the scene.
+								<br><strong>Default:</strong> 10
+								<br><strong>Range:</strong> [0, infinity]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
+						<div class="row">
                             <div class="col-md-8">
                                 <h4 id="line5_5">Goniometric Radiation(Point Light)</h4>
 							</div>
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								The filename of the image file that stores a goniometric diagram to use for the lighting distribution.
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                         <div class="row">
                             <div class="col-md-8">
                                 <h4 id="line5_6">Cone Angle(Spot Light)</h4>
@@ -441,12 +610,34 @@
                         </div>
                         <!-- end row -->
 						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								The angle that the spotlight's cone makes with its primary axis. 
+								<br><strong>Default:</strong> 30
+								<br><strong>Range:</strong> [0, 180]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
+						<div class="row">
                             <div class="col-md-8">
                                 <h4 id="line5_7">Cone Delta Angle(Spot Light)</h4>
                             </div>
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								The angle at which the spotlight intensity begins to fall off at the edges.
+								<br><strong>Default:</strong> 5
+								<br><strong>Range:</strong> [0, 180]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                     </section>
                     <!-- end section -->
 
@@ -465,6 +656,16 @@
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								Two types of camera currently supported including Perspective and Orthographic.
+								<br><strong>Default:</strong> Perspective
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                         <div class="row">
                             <div class="col-md-8">
                                 <h4 id="line6_2">Field of View</h4>
@@ -473,12 +674,34 @@
                         </div>
                         <!-- end row -->
 						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								Specifies the field of view for the perspective camera. This is the spread angle of the viewing frustum along the narrower of the image's width and height.
+								<br><strong>Default:</strong> 90
+								<br><strong>Range:</strong> [0, 180]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
+						<div class="row">
                             <div class="col-md-8">
                                 <h4 id="line6_3">Shutter Open</h4>
 							</div>
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								The time at which the virtual camera shutter opens.
+								<br><strong>Default:</strong> 0
+								<br><strong>Range:</strong> [0, infinity]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                         <div class="row">
                             <div class="col-md-8">
                                 <h4 id="line6_4">Shutter Close</h4>
@@ -487,12 +710,34 @@
                         </div>
                         <!-- end row -->
 						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								The time at which the virtual camera shutter closes.
+								<br><strong>Default:</strong> 1
+								<br><strong>Range:</strong> [0, infinity]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
+						<div class="row">
                             <div class="col-md-8">
                                 <h4 id="line6_5">Lens Radius</h4>
 							</div>
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								The radius of the lens. Used to render scenes with depth of field and focus effects. The default value yields a pinhole camera.
+								<br><strong>Default:</strong> 0
+								<br><strong>Range:</strong> [0, infinity]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                         <div class="row">
                             <div class="col-md-8">
                                 <h4 id="line6_6">Focal Distance</h4>
@@ -500,6 +745,17 @@
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								The focal distance of the lens. If <strong>lensradius</strong> is zero, this has no effect. Otherwise, it specifies the distance from the camera origin to the focal plane.
+								<br><strong>Default:</strong> 1
+								<br><strong>Range:</strong> [0, infinity]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                     </section>
                     <!-- end section -->
 
@@ -519,6 +775,17 @@
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								The number of pixels in the X direction.
+								<br><strong>Default:</strong> 640
+								<br><strong>Range:</strong> [0, infinity]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                         <div class="row">
                             <div class="col-md-8">
                                 <h4 id="line7_2">Resolution Y</h4>
@@ -527,12 +794,34 @@
                         </div>
                         <!-- end row -->
 						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								The number of pixels in the Y direction.
+								<br><strong>Default:</strong> 480
+								<br><strong>Range:</strong> [0, infinity]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
+						<div class="row">
                             <div class="col-md-8">
                                 <h4 id="line7_3">Scale</h4>
 							</div>
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								Scale factor to apply to film pixel values before saving the image.
+								<br><strong>Default:</strong> 1
+								<br><strong>Range:</strong> [0, infinity]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                         <div class="row">
                             <div class="col-md-8">
                                 <h4 id="line7_4">Diagonal Length</h4>
@@ -540,6 +829,17 @@
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								Diagonal length of the film, in mm. (This value is only used when the RealisticCamera is used.
+								<br><strong>Default:</strong> 35
+								<br><strong>Range:</strong> [0, infinity]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                     </section>
                     <!-- end section -->
 
@@ -552,13 +852,6 @@
                             <!-- end col -->
                         </div>
                         <!-- end row -->
-						<div class="row">
-                            <div class="col-md-8">
-                                <h4 id="line8_1">Type</h4>
-							</div>
-                            <!-- end col -->
-                        </div>
-                        <!-- end row -->
                         <div class="row">
                             <div class="col-md-8">
                                 <h4 id="line8_2">Model</h4>
@@ -567,13 +860,33 @@
                         </div>
                         <!-- end row -->
 						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								General material model that supports BSDF.
+								<br><strong>Default:</strong> Universal
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
+						<div class="row">
                             <div class="col-md-8">
                                 <h4 id="line8_3">Kr</h4>
 							</div>
                             <!-- end col -->
                         </div>
                         <!-- end row -->
-
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								The reflectivity of the surface.
+								<br><strong>Default:</strong> (0.5, 0.5, 0.5)
+								<br><strong>Range:</strong> [(0.0, 0.0, 0.0), (1.0, 1.0, 1.0)]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                         <div class="row">
                             <div class="col-md-8">
                                 <h4 id="line8_4">Kt</h4>
@@ -582,12 +895,34 @@
                         </div>
                         <!-- end row -->
 						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								The transmissivity of the surface.
+								<br><strong>Default:</strong> (0.0, 0.0, 0.0)
+								<br><strong>Range:</strong> [(0.0, 0.0, 0.0), (1.0, 1.0, 1.0)]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
+						<div class="row">
                             <div class="col-md-8">
                                 <h4 id="line8_5">k</h4>
 							</div>
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								Absorption coefficient to use in computing the material's reflectance.
+								<br><strong>Default:</strong> (0.0, 0.0, 0.0)
+								<br><strong>Range:</strong> [(0.0, 0.0, 0.0), (1.0, 1.0, 1.0)]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                         <div class="row">
                             <div class="col-md-8">
                                 <h4 id="line8_6">IoR</h4>
@@ -596,12 +931,34 @@
                         </div>
                         <!-- end row -->
 						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								Object's index of refraction.
+								<br><strong>Default:</strong> 1.33
+								<br><strong>Range:</strong> [0, infinity]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
+						<div class="row">
                             <div class="col-md-8">
                                 <h4 id="line8_7">Roughness</h4>
                             </div>
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								Material's roughness. Affects specular reflection and transmission.
+								<br><strong>Default:</strong> 0.5
+								<br><strong>Range:</strong> [0.0, 1.0]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
 						<div class="row">
                             <div class="col-md-8">
                                 <h4 id="line8_8">Opacity</h4>
@@ -610,12 +967,34 @@
                         </div>
                         <!-- end row -->
 						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								The opacity of the surface. Note that when less than one, the material transmits light without refracting it.
+								<br><strong>Default:</strong> 1.0
+								<br><strong>Range:</strong> [0.0, 1.0]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
+						<div class="row">
                             <div class="col-md-8">
                                 <h4 id="line8_9">Ks</h4>
                             </div>
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								The coefficient of specular reflection and transmission.
+								<br><strong>Default:</strong> (1.0, 1.0, 1.0)
+								<br><strong>Range:</strong> [(0.0, 0.0, 0.0), (1.0, 1.0, 1.0)]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
 						<div class="row">
                             <div class="col-md-8">
                                 <h4 id="line8_10">Kd</h4>
@@ -624,12 +1003,34 @@
                         </div>
                         <!-- end row -->
 						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								The diffuse reflectivity of the surface.
+								<br><strong>Default:</strong> 0.0
+								<br><strong>Range:</strong> [0.0, 1.0]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
+						<div class="row">
                             <div class="col-md-8">
                                 <h4 id="line8_11">Anisotropic</h4>
                             </div>
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								Controls degree of anisotropy in the specular highlight.
+								<br><strong>Default:</strong> 0.0
+								<br><strong>Range:</strong> [0.0, 1.0]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                     </section>
                     <!-- end section -->
 					
@@ -642,12 +1043,22 @@
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+						
 						<div class="row">
                             <div class="col-md-8">
                                 <h4 id="line9_1">File Input</h4>
                             </div>
                             <!-- end col -->
                         </div>
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								A path to the file defined inside this property.
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                     </section>
                     <!-- end section -->
 					<section id="line10" class="section">
@@ -663,6 +1074,16 @@
                             </div>
                             <!-- end col -->
                         </div>
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								This Button will create a PBRT Shader Node, Principled BSDF, and Output Shader Node for the selected object if it does not have one.
+								Also, This button will match up PBRT Shader Node with Principled BSDF.
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
                     </section>
                     <!-- end section -->
 					<section id="line11" class="section">
