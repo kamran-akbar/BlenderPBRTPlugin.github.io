@@ -185,6 +185,7 @@
                                     <li><a href="#line8_11">Anisotropic</a></li>
                                     <li><a href="#line8_12">U Roughness</a></li>
                                     <li><a href="#line8_13">V Roughness</a></li>
+                                    <li><a href="#line8_14">Remap Roughness</a></li>
                                 </ul>
 							</li>
 							<li><a href="#line9">File Input Node</a>
@@ -1064,6 +1065,25 @@
 								Microfacet roughness in the v direction. If zero, perfect specular reflection is modeled.
 								<br><strong>Default:</strong> 0.5
 								<br><strong>Range:</strong> [0.0, 1.0]
+								</p>
+							</div>
+                            <!-- end col -->
+                        </div>
+						<!-- end row -->
+						<div class="row">
+                            <div class="col-md-8">
+                                <h4 id="line8_14">Remap Roughness</h4>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+						<div class="row">
+                            <div class="col-md-12">
+                                <p> 
+								If true, roughness values are expected to be in the range [0,1], and are remapped to microfacet distribution function parameter values that range from near-perfect-specular at 0 to very rough at 1. 
+								Otherwise the roughness parameters are used directly for the alpha parameters of the microfacet distribution function.
+								<br><strong>Default:</strong> True
+								<br><strong>Range:</strong> False or True
 								</p>
 							</div>
                             <!-- end col -->
